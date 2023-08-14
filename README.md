@@ -1,5 +1,5 @@
 # AIDI 2003-02 Final Project
-This project uses LLMs to generate helpful scripts.
+This project uses an LLM to generate helpful scripts.
 
 # Setup
 Copy the `.env.sample` file to `.env`.
