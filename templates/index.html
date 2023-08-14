@@ -38,6 +38,9 @@
             if (prompt.trim() === '') {
                 return;
             }
+
+            outputSection.classList.remove('hidden');
+            outputCode.textContent = 'Generating...';
             
             const response = await fetch('/get_response', {
                 method: 'POST',
@@ -48,9 +51,9 @@
             });
             
             if (response.ok) {
+
                 const data = await response.json();
                 outputCode.textContent = data.response;
-                outputSection.classList.remove('hidden');
 
                 hljs.highlightAll();
 
