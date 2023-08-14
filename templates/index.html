@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Educational Chatbot</title>
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <title>Code Script Generator</title>
 
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +13,7 @@
 </head>
 <body class="bg-gray-100 h-screen flex items-center justify-center">
 
-    <div class="max-w-md p-4 bg-white rounded-lg shadow-md">
+    <div class="max-w-3xl p-4 bg-white rounded-lg shadow-md">
         <form id="promptForm" class="mb-4">
             <label for="promptInput" class="block font-medium text-gray-700">Enter Prompt:</label>
             <input type="text" id="promptInput" class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-indigo-300">
@@ -40,7 +39,6 @@
                 return;
             }
             
-            // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint
             const response = await fetch('/get_response', {
                 method: 'POST',
                 headers: {
